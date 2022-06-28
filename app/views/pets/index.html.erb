@@ -1,0 +1,18 @@
+<h1>Rent a crazy pet!</h1>
+
+<div id = "intro"> </div>
+<h2>Take photos with a weird pet to make it look like you have an interesting life!</h2>
+<p>Pet owners all around the world have joined Crazy Pets to give you an opportunity to rent some of the craziest pets on the planet so that you can chill with them and take instagram photos together.</p>
+
+<div id = "pets">
+  <h3>These are the pets we currently have on offer!</h3>
+  <% @pets.each do |pet| %>
+  <ul></ul>
+    <li>  <%= image_tag("#{pet.image_url}")%> </li>
+    <li> Name: <%= pet.name %> </li>
+    <li> Description: <%= pet.description %></li>
+    <li> Species: <%= pet.species %></li>
+    <li> <b> Price to rent: <%= pet.price %> </b> </li>
+    <br>
+  <% end %>
+</div>
