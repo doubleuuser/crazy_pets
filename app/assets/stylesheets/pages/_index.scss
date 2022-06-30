@@ -1,2 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.name {
+  font-weight: 800;
+  font-size: 24;
+}
+
+#pets {
+  list-style: none;
+}

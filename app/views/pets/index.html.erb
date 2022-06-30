@@ -9,10 +9,10 @@
   <% @pets.each do |pet| %>
   <ul></ul>
     <li>  <%= image_tag("#{pet.image_url}")%> </li>
-    <li> Name: <%= pet.name %> </li>
+    <li class="name"> Name: <%= pet.name %> </li>
     <li> Description: <%= pet.description %></li>
     <li> Species: <%= pet.species %></li>
-    <li> <b> Price to rent: <%= pet.price %> </b> </li>
+    <li> <b> Price to rent: $<%= pet.price %> </b> </li>
     <br>
   <% end %>
 </div>
