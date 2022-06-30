@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'pets#index'
@@ -8,5 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: [ :show, :edit, :destroy ]
+
+  get 'users/:id/my_pets', to: 'users#my_pets'
+  get 'users/:id/my_bookings', to: 'users#my_bookings'
 
 end
