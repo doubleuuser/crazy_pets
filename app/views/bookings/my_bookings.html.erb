@@ -2,7 +2,7 @@
   <h3>Your bookings!</h3>
   <% @my_bookings.each do |booking| %>
   <ul></ul>
-    <li > Pet: <%= pet.pet %> </li>
-    <li> User: <%= pet.user %></li>
+    <li> Pet: <%= booking.pet.name %> </li>
+    <li> Price: <%= booking.pet.price %></li>
   <% end %>
 </div>
