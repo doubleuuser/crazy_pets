@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [ :show, :edit, :destroy ]
 
-  get 'users/:id/my_pets', to: 'pets#my_pets'
-  get 'users/:id/my_bookings', to: 'bookings#my_bookings'
+  get 'users/:id/my_pets', to: 'pets#my_pets', as: 'my_pets'
+  get 'users/:id/my_bookings', to: 'bookings#my_bookings', as: 'my_bookings'
 
 end
