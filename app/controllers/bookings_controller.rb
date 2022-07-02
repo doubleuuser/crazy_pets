@@ -18,6 +18,10 @@ class BookingsController < ApplicationController
     redirect_to bookings_path(@booking)
   end
 
+  def my_bookings
+    @my_bookings = current_user.bookings
+  end
+
   private
 
   def booking_params
