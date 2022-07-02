@@ -8,6 +8,8 @@
     <li> Description: <%= pet.description %></li>
     <li> Species: <%= pet.species %></li>
     <li> <b> Price to rent: $<%= pet.price %> </b> </li>
+    <%= link_to "Edit", edit_pet_path(pet) %>
+    <%= link_to "Delete", pet_path(pet), method: :delete %>
     <br>
   <% end %>
 </div>
