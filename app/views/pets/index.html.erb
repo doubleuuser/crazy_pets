@@ -1,24 +1,22 @@
 <div class="container">
   <h1>Rent a crazy pet!</h1>
 
-  <div id = "intro"> </div>
+  <div id = "intro" class="container">
   <h2>Take photos with a weird pet to make it look like you have an interesting life!</h2>
   <p>Pet owners all around the world have joined Crazy Pets to give you an opportunity to rent some of the craziest pets on the planet so that you can chill with them and take instagram photos together.</p>
-
+  </div>
+  <div>
+    <%= link_to "Add Pet", new_pet_path %>
+  </div>
   <div id = "pets">
     <h3>These are the pets we currently have on offer!</h3>
     <% @pets.each do |pet| %>
     <ul></ul>
-      <li>  <%= image_tag("#{pet.image_url}")%> </li>
+      <li>  <%= image_tag("#{pet.image_url}", :height => "400") %> </li>
       <li class="name"> <%= pet.name %> </li>
       <li> <b> Price to rent: $<%= pet.price %> </b> </li>
       <button><a href="<%= pet_path(pet) %>">View pet</a></button>
-      <%#= link_to   %>
       <br>
     <% end %>
-
-  </div>
-
-    <%= link_to "Add Pet", new_pet_path %>
   </div>
 </div>
