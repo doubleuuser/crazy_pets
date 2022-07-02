@@ -9,12 +9,14 @@
   <% @pets.each do |pet| %>
   <ul></ul>
     <li>  <%= image_tag("#{pet.image_url}")%> </li>
-    <li class="name"> Name: <%= pet.name %> </li>
-    <li> Description: <%= pet.description %></li>
-    <li> Species: <%= pet.species %></li>
+    <li class="name"> <%= pet.name %> </li>
     <li> <b> Price to rent: $<%= pet.price %> </b> </li>
+    <button><a href="<%= pet_path(pet) %>">View pet</a></button>
+    <%#= link_to   %>
     <br>
   <% end %>
+
+</div>
 
   <%= link_to "Add Pet", new_pet_path %>
 </div>
