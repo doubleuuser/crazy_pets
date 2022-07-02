@@ -4,12 +4,17 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
+    @booking = Booking.new(booking_params)
   end
 
   def show
     set_booking
   end
+
+  def list
+    Pet.where()
+  end
+
 
   def create
     @booking = Booking.new(booking_params)
@@ -21,7 +26,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :pet, :user)
+    params.require(:booking).permit(:pet, :user)
   end
 
   def set_booking

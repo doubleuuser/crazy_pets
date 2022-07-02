@@ -23,6 +23,10 @@ class PetsController < ApplicationController
     redirect_to pets_path(@pet)
   end
 
+  def my_pets
+    @my_pets = current_user.pets
+  end
+
   def pet_params
     params.require(:pet).permit(:name, :description, :price, :species, :image_url)
   end
