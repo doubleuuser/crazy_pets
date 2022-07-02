@@ -23,6 +23,10 @@ class BookingsController < ApplicationController
     redirect_to my_bookings_path(@booking.user)
   end
 
+  def my_bookings
+    @my_bookings = current_user.bookings
+  end
+
   private
 
 
