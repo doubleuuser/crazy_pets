@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
+  before_action :set_pet, only: [:create]
   def index
     @bookings = Booking.all #add user?
   end
 
   def new
-    @booking = Booking.new(booking_params)
   end
 
   def show
@@ -17,19 +17,20 @@ class BookingsController < ApplicationController
 
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(user: current_user, pet: @pet)
     # how to get the associations?
     @booking.save
-    redirect_to bookings_path(@booking)
+    redirect_to my_bookings_path(@booking.user)
   end
 
   private
 
-  def booking_params
-    params.require(:booking).permit(:pet, :user)
-  end
 
   def set_booking
     @booking = Booking.find(params[:id])
+  end
+
+  def set_pet
+    @pet = Pet.find(params[:pet_id])
   end
 end
