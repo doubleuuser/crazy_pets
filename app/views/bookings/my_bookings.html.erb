@@ -1,2 +1,8 @@
-<h1>Users#my_bookings</h1>
-<p>Find me in app/views/users/my_bookings.html.erb</p>
+<div id = "my_bookings">
+  <h3>Your bookings!</h3>
+  <% @my_bookings.each do |booking| %>
+  <ul></ul>
+    <li > Pet: <%= pet.pet %> </li>
+    <li> User: <%= pet.user %></li>
+  <% end %>
+</div>

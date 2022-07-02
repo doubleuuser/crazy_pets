@@ -1,4 +1,13 @@
 <h1>Users#my_pets</h1>
-<p>Find me in app/views/users/my_pets.html.erb</p>
-<div id = "my pets">
-  <h3>These are the pets we currently have on offer!</h3>
+<div id = "my_pets">
+  <h3>Your pets!</h3>
+  <% @my_pets.each do |pet| %>
+  <ul></ul>
+    <li>  <%= image_tag("#{pet.image_url}")%> </li>
+    <li class="name"> Name: <%= pet.name %> </li>
+    <li> Description: <%= pet.description %></li>
+    <li> Species: <%= pet.species %></li>
+    <li> <b> Price to rent: $<%= pet.price %> </b> </li>
+    <br>
+  <% end %>
+</div>
