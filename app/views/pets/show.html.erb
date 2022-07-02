@@ -8,5 +8,5 @@
       <li> <b> Price to rent: $<%= @pet.price %> </b> </li>
       <br>
 
-    <%= link_to "Book Pet", new_pet_booking_path(@pet) %>
+    <%= link_to "Book Pet", pet_bookings_path(@pet), method: :post %>
 </div>
