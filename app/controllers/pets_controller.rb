@@ -40,6 +40,9 @@ class PetsController < ApplicationController
     redirect_to my_pets_path(current_user)
   end
 
+  def home
+  end
+
   private
 
   def pet_params
