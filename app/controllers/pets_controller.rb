@@ -28,7 +28,7 @@ class PetsController < ApplicationController
     puts current_user
     puts "#{@pet.name} is my pet and i am #{@pet.user_id}"
     @pet.save
-    redirect_to pets_path(@pet)
+    redirect_to pets_path
   end
 
   def my_pets
@@ -46,7 +46,7 @@ class PetsController < ApplicationController
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :description, :price, :species, :image_url)
+    params.require(:pet).permit(:name, :description, :price, :species, :photo)
   end
 
   def set_pet
