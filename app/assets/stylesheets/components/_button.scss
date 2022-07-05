@@ -32,7 +32,9 @@
 }
 
 .btn-flat-centered {
-  color: white;
+  color:white;
+  font-weight: bold;
+  background: #E67E22;
   padding: 8px 24px;
   border-radius: 4px;
   transition: background 0.3s ease;
@@ -40,4 +42,13 @@
   align-items: center;
   margin: 0 auto;
   display: block;
+}
+
+.btn-flat-index {
+  color: white;
+  border: 2px solid #E67E22;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  margin-bottom: 12px;
 }

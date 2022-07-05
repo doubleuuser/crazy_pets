@@ -1,16 +1,17 @@
-<div id = "my_bookings" class = "container">
-  <div>
-    <h1>Your bookings!</h1>
-  </div>
-  <div class="card-product" id = "pets">
+<div class="container">
+        <%# <div id = "my_bookings" class = "container"> %>
+
+  <h1>Your bookings!</h1>
+
     <% @my_bookings.each do |booking| %>
-    <ul></ul>
-   <li><%= image_tag("#{booking.pet.image_url}", :height => "400") %> </li>
-    <div class="card-product-infos">
-    <li> Pet: <%= booking.pet.name  %> </li>
-    <li> Price: <%= booking.pet.price %></li>
-   <% end %>
+
+   <div class="card-product">
+    <%= image_tag("#{booking.pet.image_url}") %>
+
+        <div class="card-product-infos">
+        <h3><strong>Pet:</strong> <%= booking.pet.name%></h3>
+        <h3><strong>Price:</strong> <%= booking.pet.price%></h3>
+        </div>
    </div>
-   </div>
-  </div>
+    <% end %>
 </div>

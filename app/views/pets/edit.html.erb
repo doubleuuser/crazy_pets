@@ -1,10 +1,13 @@
-<h1>Update your crazy pet</h1>
-
-<%= simple_form_for [ @pet ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :species %>
-  <%= f.input :image_url %>
-  <%= f.submit "Update", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <h1>Update Your Crazy Pet</h1>
+    <div class="create-pet">
+      <%= simple_form_for [ @pet ] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :species %>
+        <%= f.input :image_url %>
+        <%= f.submit "Update", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+</div>
