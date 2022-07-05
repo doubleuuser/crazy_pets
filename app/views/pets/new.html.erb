@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <h1>Rent Out Your Crazy Pet</h1>
   <div class="create-pet">
@@ -10,4 +11,17 @@
       <%= f.submit "Add my pet", class: "btn btn-primary" %>
     <% end %>
   </div>
+=======
+<div class="contatiner">
+  <h1>Add your crazy pet for rent to make $$$</h1>
+
+  <%= simple_form_for [ @pet ] do |f| %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :species %>
+    <%= f.submit "Add my pet", class: "btn btn-primary" %>
+  <% end %>
+>>>>>>> master
 </div>

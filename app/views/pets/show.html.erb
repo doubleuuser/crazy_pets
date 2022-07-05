@@ -1,6 +1,7 @@
 <div class="container">
   <h1><%= @pet.name %></h1>
   <%# <div id = "pets"> %>
+<<<<<<< HEAD
     <div class="card-product-show">
       <%= image_tag("#{@pet.image_url}", :height=> "200")%>
       <div class="card-product-infos-show">
@@ -8,6 +9,12 @@
         <p><strong>Species:</strong> <%= @pet.species %></p>
         <p><strong>Price to rent:</strong> $<%= @pet.price %></p>
         <%#<br>%>
+=======
+      <% if @pet.photo.attached? %>
+        <%= cl_image_tag @pet.photo.key, height: 200 %>
+      <% end %>
+
+>>>>>>> master
 
         <button class="btn-flat"><%= link_to "Book Pet", pet_bookings_path(@pet), method: :post %></button>
       </div>
