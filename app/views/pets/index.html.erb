@@ -13,7 +13,10 @@
     <% @pets.each do |pet| %>
       <div class="card-product">
         <%# <ul></ul> %>
-        <%= image_tag("#{pet.image_url}") %>
+        <% if pet.photo.attached? %>
+          <%= cl_image_tag pet.photo.key, height: 400, crop: :fill %>
+        <% end %>
+        <%#= image_tag("#{pet.image_url}") %>
 
           <div class="card-product-infos">
             <h3><%= pet.name %></h3>
