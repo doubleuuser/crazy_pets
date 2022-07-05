@@ -1,0 +1,15 @@
+.petscontainer {
+  display: flex; /* or inline-flex */
+  justify-content: space-between;
+}
+
+.card-main {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-index {
+  display: flex;
+  margin: auto;
+}

@@ -1,0 +1,43 @@
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#fb7d16, #f06305);
+  transition: background 0.3s ease;
+  border: 1px solid #fe7114;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#eba55e, #eba55e);
+  color: white;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-flat-centered {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  margin-bottom: 14px;
+  align-items: center;
+  margin: 0 auto;
+  display: block;
+}

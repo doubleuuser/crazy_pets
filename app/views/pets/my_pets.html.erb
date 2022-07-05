@@ -1,15 +1,22 @@
 <div class="container">
   <div id = "pets">
-  <h1>Your pets!</h1>
-  <% @my_pets.each do |pet| %>
-  <ul></ul>
-    <li>  <%= image_tag("#{pet.image_url}", :height => "400")%> </li>
-    <li class="name"> Name: <%= pet.name %> </li>
-    <li> Description: <%= pet.description %></li>
-    <li> Species: <%= pet.species %></li>
-    <li> <b> Price to rent: $<%= pet.price %> </b> </li>
-    <%= link_to "Edit", edit_pet_path(pet) %>
-    <%= link_to "Delete", pet_path(pet), method: :delete %>
-    <br>
-  <% end %>
+    <h1>Your pets!</h1>
+
+    <% @my_pets.each do |pet| %>
+    <%# <ul></ul> %>
+    <div class="container-card-main">
+      <div class="card-product">
+        <li><%= image_tag("#{pet.image_url}", :height => "400")%> </li>
+
+          <div class="card-product-infos">
+            <h2><%= pet.name %> the <%= pet.species %></h2>
+            <li><p><%= pet.description %></p></li>
+            <li> <b> Price to rent: $<%= pet.price %> </b> </li>
+            <button class="btn btn-ghost"> <%= link_to "Edit", edit_pet_path(pet) %></button>
+            <button class="btn btn-ghost"> <%= link_to "Delete", pet_path(pet), method: :delete %></button>
+          </div>
+    </div>
+    <% end %>
+    </div>
+  </div>
 </div>
