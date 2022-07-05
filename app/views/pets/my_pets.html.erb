@@ -6,8 +6,8 @@
     <%# <ul></ul> %>
     <div class="container-card-main">
       <div class="card-product">
-         <% if @pet.photo.attached? %>
-          <%= cl_image_tag @pet.photo.key, height: 400 %>
+         <% if pet.photo.attached? %>
+          <%= cl_image_tag pet.photo.key, height: 400 %>
          <% end %>
 
           <div class="card-product-infos">
