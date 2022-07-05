@@ -6,7 +6,9 @@
     <% @my_bookings.each do |booking| %>
 
    <div class="card-product">
-    <%= image_tag("#{booking.pet.image_url}") %>
+      <% if booking.pet.photo.attached? %>
+          <%= cl_image_tag booking.pet.photo.key, height: 400 %>
+      <% end %>
 
         <div class="card-product-infos">
         <h3><strong>Pet:</strong> <%= booking.pet.name%></h3>

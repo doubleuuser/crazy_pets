@@ -6,7 +6,9 @@
     <%# <ul></ul> %>
     <div class="container-card-main">
       <div class="card-product">
-        <li><%= image_tag("#{pet.image_url}", :height => "400")%> </li>
+         <% if pet.photo.attached? %>
+          <%= cl_image_tag pet.photo.key, height: 400 %>
+         <% end %>
 
           <div class="card-product-infos">
             <h2><%= pet.name %> the <%= pet.species %></h2>
