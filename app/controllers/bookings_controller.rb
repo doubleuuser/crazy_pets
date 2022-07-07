@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_pet, only: [:create]
+  before_action :set_booking, only: [:edit, :update]
+
   def index
     @bookings = Booking.all
   end
@@ -27,11 +29,24 @@ class BookingsController < ApplicationController
     @my_bookings = current_user.bookings
   end
 
-  private
+  def edit
+    @booking.user = current_user
+    @booking.pet = @pet
+  end
 
+  def update
+    @booking.update(booking_params)
+    redirect_to booking_path(@booking)
+  end
+
+  private
 
   def set_booking
     @booking = Booking.find(params[:id])
+  end
+
+  def booking_params
+    params.require(:booking).permit(:status)
   end
 
   def set_pet
