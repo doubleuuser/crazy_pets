@@ -7,7 +7,7 @@
         <p><strong>Price to rent:</strong> $<%= @booking.pet.price %></p>
         <p><strong>Booking Status:</strong> <%= @booking.status.capitalize %></p>
         <%#<br>%>
-        <% if @booking.pet.user = current_user %>
+        <% if @booking.pet.user == current_user %>
           <button class="btn-flat"><%= link_to "Update Status", edit_booking_path(@booking) %></button>
         <% end %>
       </div>
