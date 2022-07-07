@@ -13,6 +13,7 @@
         <div class="card-product-infos">
         <h3><strong>Pet:</strong> <%= booking.pet.name%></h3>
         <h3><strong>Price:</strong> <%= booking.pet.price%></h3>
+        <button class="btn btn-flat-index"><%= link_to "View Booking", booking_path(booking) %></button>
         </div>
    </div>
     <% end %>

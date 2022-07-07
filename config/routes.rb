@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :index, :new, :create ]
   end
 
-  resources :bookings, only: [ :show, :edit, :destroy ]
+  resources :bookings, except: [ :new, :index, :create ]
 
   get 'users/:id/my_pets', to: 'pets#my_pets', as: 'my_pets'
   get 'users/:id/my_bookings', to: 'bookings#my_bookings', as: 'my_bookings'

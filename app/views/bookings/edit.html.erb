@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Update Booking Status</h1>
+    <div class="create-pet">
+      <%=  simple_form_for @booking do |f| %>
+      <%= f.input :status, collection:Booking.statuses.keys %>
+      <%# <%= select_tag :status, options_for_select(Booking.statuses.map {|k, v| [k.humanize.capitalize, v]}) %>
+      <%= f.submit "Update", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+</div>

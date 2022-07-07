@@ -1,0 +1,14 @@
+<div class="container">
+  <%# <div id = "pets"> %>
+    <div class="card-product-show">
+      <div class="card-product-infos-show">
+        <p><strong>User:</strong> <%= @booking.user %></p>
+        <p><strong>Pet:</strong> <%= @booking.pet.name %></p>
+        <p><strong>Price to rent:</strong> $<%= @booking.pet.price %></p>
+        <p><strong>Booking Status:</strong> <%= @booking.status.capitalize %></p>
+        <%#<br>%>
+
+        <button class="btn-flat"><%= link_to "Update Status", edit_booking_path(@booking) %></button>
+      </div>
+    </div>
+</div>
