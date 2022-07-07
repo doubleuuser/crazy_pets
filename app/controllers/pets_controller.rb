@@ -41,6 +41,9 @@ class PetsController < ApplicationController
   end
 
   def home
+    if user_signed_in?
+      redirect_to pets_path
+    end
   end
 
   private

@@ -10,8 +10,9 @@
         <p><strong>Species:</strong> <%= @pet.species %></p>
         <p><strong>Price to rent:</strong> $<%= @pet.price %></p>
         <%#<br>%>
-
-        <button class="btn-flat"><%= link_to "Book Pet", pet_bookings_path(@pet), method: :post %></button>
+        <% if @pet.user = !current_user %>
+          <button class="btn-flat"><%= link_to "Book Pet", pet_bookings_path(@pet), method: :post %></button>
+        <% end %>
       </div>
     </div>
 </div>
