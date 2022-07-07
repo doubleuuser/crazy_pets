@@ -1,10 +1,10 @@
 <div class="container">
   <div id = "pets">
-    <h1>Your pets!</h1>
+    <h1>Your Pets</h1>
 
-    <% @my_pets.each do |pet| %>
-    <%# <ul></ul> %>
-    <div class="container-card-main">
+    <div class="card-main">
+      <% @my_pets.each do |pet| %>
+      <%# <ul></ul> %>
       <div class="card-product">
          <% if pet.photo.attached? %>
           <%= cl_image_tag pet.photo.key, height: 400 %>
@@ -17,8 +17,8 @@
             <button class="btn btn-ghost"> <%= link_to "Edit", edit_pet_path(pet) %></button>
             <button class="btn btn-ghost"> <%= link_to "Delete", pet_path(pet), method: :delete %></button>
           </div>
-    </div>
-    <% end %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

@@ -9,21 +9,22 @@
 
     <%# <div id = "pets"> %>
     <h3 class="h3-index">These are the pets we currently have on offer:</h3>
+    <div class="index-container">
+          <% @pets.each do |pet| %>
+            <div class="card-product">
+              <%# <ul></ul> %>
+              <% if pet.photo.attached? %>
+                <%= cl_image_tag pet.photo.key, height: 400, crop: :fill %>
+              <% end %>
+              <%#= image_tag("#{pet.image_url}") %>
 
-    <% @pets.each do |pet| %>
-      <div class="card-product">
-        <%# <ul></ul> %>
-        <% if pet.photo.attached? %>
-          <%= cl_image_tag pet.photo.key, height: 400, crop: :fill %>
-        <% end %>
-        <%#= image_tag("#{pet.image_url}") %>
-
-          <div class="card-product-infos">
-            <h3><strong><%= pet.name %></strong></h3>
-            <h3>Price to rent: $<%= pet.price %></h3>
-            <button class="btn btn-flat-index"><%= link_to "View Pet", pet_path(pet) %></button>
-          </div>
-      </div>
-    <% end %>
+                <div class="card-product-infos">
+                  <h3><strong><%= pet.name %></strong></h3>
+                  <h3>Price to rent: $<%= pet.price %></h3>
+                  <button class="btn btn-flat-index"><%= link_to "View Pet", pet_path(pet) %></button>
+                </div>
+                </div>
+              <% end %>
+    </div>
   </div>
 </div>

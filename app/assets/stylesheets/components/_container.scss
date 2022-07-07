@@ -4,9 +4,9 @@
 }
 
 .card-main {
-  padding: 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly
 }
 
 .container-index {
@@ -17,4 +17,10 @@
 
 .create-pet {
   align-items: center;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
