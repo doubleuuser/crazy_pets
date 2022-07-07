@@ -3,9 +3,9 @@
 
   <h1>Your bookings!</h1>
 
+  <div class="card-main">
     <% @my_bookings.each do |booking| %>
-
-   <div class="card-product">
+    <div class="card-product">
       <% if booking.pet.photo.attached? %>
           <%= cl_image_tag booking.pet.photo.key, height: 400 %>
       <% end %>
@@ -14,6 +14,7 @@
         <h3><strong>Pet:</strong> <%= booking.pet.name%></h3>
         <h3><strong>Price:</strong> <%= booking.pet.price%></h3>
         </div>
-   </div>
+    </div>
     <% end %>
+  </div>
 </div>
