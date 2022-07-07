@@ -1,21 +1,48 @@
 <div class="container">
         <%# <div id = "my_bookings" class = "container"> %>
 
+
+
   <h1>Your bookings!</h1>
-
   <div class="card-main">
-    <% @my_bookings.each do |booking| %>
-    <div class="card-product">
-      <% if booking.pet.photo.attached? %>
-          <%= cl_image_tag booking.pet.photo.key, height: 400 %>
-      <% end %>
 
-        <div class="card-product-infos">
-        <h3><strong>Pet:</strong> <%= booking.pet.name%></h3>
-        <h3><strong>Price:</strong> <%= booking.pet.price%></h3>
-        <button class="btn btn-flat-index"><%= link_to "View Booking", booking_path(booking) %></button>
-        </div>
+    <%# show the pets i have booked, i do not own the pets %>
+    <div>
+      <% @my_bookings.each do |booking| %>
+          <% if booking.pet.user != current_user %>
+            <div class="card-product">
+              <% if booking.pet.photo.attached? %>
+                <%= cl_image_tag booking.pet.photo.key, height: 400 %>
+              <% end %>
+                <div class="card-product-infos">
+                  <h3><strong>Pet:</strong> <%= booking.pet.name%></h3>
+                  <h3><strong>Price:</strong> <%= booking.pet.price%></h3>
+                  <button class="btn btn-flat-index"><%= link_to "View Booking", booking_path(booking) %></button>
+                </div>
+            </div>
+          <% end %>
+      <% end %>
     </div>
+    <div>
+    <h1>Other users want to rent your pets. Confirm or cancel.</h1>
+          <% @my_bookings.each do |booking| %>
+          <% if booking.pet.user == current_user %>
+
+            <div class="card-product">
+              <% if booking.pet.photo.attached? %>
+                  <%= cl_image_tag booking.pet.photo.key, height: 400 %>
+              <% end %>
+
+                <div class="card-product-infos">
+                <h3><strong>Pet:</strong> <%= booking.pet.name%></h3>
+                <h3><strong>Price:</strong> <%= booking.pet.price%></h3>
+                <button class="btn btn-flat-index"><%= link_to "View Booking", booking_path(booking) %></button>
+                </div>
+            </div>
+          <% end %>
+      </div>
+
+
+    <%# show the bookings of my pets, i am the owner of the pets %>
     <% end %>
-  </div>
 </div>
