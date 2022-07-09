@@ -26,7 +26,6 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: #f9bc89;
   margin-top: 2vw;
   padding-top: 2em;
   align-content: flex-start;
@@ -58,8 +57,7 @@
 }
 
 .mypets-container {
-  background-color: #f9bc89;
-}
+  /* background-color: #f9bc89; */}
 
 /* .bookings-container {
   /* background-color: #f9bc89; */
@@ -71,7 +69,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: #f9bc89;
+
   margin-top: 2vw;
   padding-top: 2em;
 }
