@@ -3,6 +3,9 @@
   <div class="card-main">
     <div class="card-product-show">
       <div class="card-product-infos-show">
+        <% if @pet.photo.attached? %>
+          <%= cl_image_tag @pet.photo.key, height: 200 %>
+        <% end %>
         <p><strong>Pet:</strong> <%= @booking.pet.name %></p>
         <p><strong>Price to rent:</strong> $<%= @booking.pet.price %></p>
         <p><strong>Booking Status:</strong> <%= @booking.status.capitalize %></p>
