@@ -2,11 +2,12 @@
         <%# <div id = "my_bookings" class = "container"> %>
 
   <h1>Your bookings!</h1>
-  <div class="index-container">
+
 
     <%# show the pets i have booked, i do not own the pets %>
     <div>
       <% @my_bookings.each do |booking| %>
+      <div class="bookings-content-container">
           <% if booking.pet.user != current_user %>
             <div class="card-product">
               <% if booking.pet.photo.attached? %>
@@ -20,9 +21,8 @@
             </div>
           <% end %>
       <% end %>
-    </div>
 
-    <div>
+
       <h2>Other users want to rent your pets. Click below to confirm or cancel👇.</h2>
         <% @my_bookings_as_owner.each do |booking| %>
 
@@ -38,7 +38,8 @@
                 </div>
             </div>
           <% end %>
-
+      </div>
+      </div>
     </div>
 
 
