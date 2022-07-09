@@ -11,7 +11,7 @@
         <p><strong>Price to rent:</strong> $<%= @pet.price %></p>
         <%#<br>%>
         <% if @pet.user != current_user %>
-          <button class="btn-flat"><%= link_to "Book Pet", pet_bookings_path(@pet), method: :post %></button>
+          <button class="btn btn-ghost"><%= link_to "Book Pet", pet_bookings_path(@pet), method: :post %></button>
         <% end %>
       </div>
     </div>
