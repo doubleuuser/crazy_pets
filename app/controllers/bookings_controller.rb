@@ -27,7 +27,10 @@ class BookingsController < ApplicationController
 
   def my_bookings
     @my_bookings = current_user.bookings
+    @my_bookings_as_owner = current_user.bookings_as_owner
   end
+
+
 
   def edit
     @booking.user = current_user

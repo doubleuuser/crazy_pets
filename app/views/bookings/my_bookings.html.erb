@@ -24,8 +24,7 @@
 
     <div>
       <h2>Other users want to rent your pets. Click below to confirm or cancel👇.</h2>
-        <% @my_bookings.each do |booking| %>
-          <% if booking.pet.user == current_user %>
+        <% @my_bookings_as_owner.each do |booking| %>
 
             <div class="card-product">
               <% if booking.pet.photo.attached? %>
@@ -39,7 +38,6 @@
                 </div>
             </div>
           <% end %>
-        <% end %>
 
     </div>
 
