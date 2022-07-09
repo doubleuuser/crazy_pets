@@ -3,13 +3,16 @@
   <div class="card-main">
     <div class="card-product-show">
       <div class="card-product-infos-show">
-        <%# <p><strong>User:</strong> <%= @booking.user </p>%>
         <p><strong>Pet:</strong> <%= @booking.pet.name %></p>
         <p><strong>Price to rent:</strong> $<%= @booking.pet.price %></p>
         <p><strong>Booking Status:</strong> <%= @booking.status.capitalize %></p>
         <%#<br>%>
         <% if @booking.pet.user == current_user %>
           <button class="btn-ghost"><%= link_to "Update Status", edit_booking_path(@booking) %></button>
+          <%# <button class="btn btn-ghost"><%= link_to "Confirm", booking_path(@booking) %>
+          <%# </button> %>
+          <%# <button class="btn btn-ghost"><%= link_to "Cancel", my_bookings_path(@booking) method: :delete %>
+          <%# </button> %>
         <% end %>
       </div>
     </div>

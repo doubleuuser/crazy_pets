@@ -1,10 +1,8 @@
 <div class="container">
         <%# <div id = "my_bookings" class = "container"> %>
 
-
-
   <h1>Your bookings!</h1>
-  <div class="card-main">
+  <div class="index-container">
 
     <%# show the pets i have booked, i do not own the pets %>
     <div>
@@ -23,6 +21,7 @@
           <% end %>
       <% end %>
     </div>
+
     <div>
     <h1>Other users want to rent your pets. Confirm or cancel.</h1>
           <% @my_bookings.each do |booking| %>

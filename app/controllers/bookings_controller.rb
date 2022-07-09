@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_pet, only: [:create]
-  before_action :set_booking, only: [:edit, :update]
+  before_action :set_booking, only: [:edit, :update, :destroy]
 
   def index
     @bookings = Booking.all
@@ -37,6 +37,11 @@ class BookingsController < ApplicationController
   def update
     @booking.update(booking_params)
     redirect_to booking_path(@booking)
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to my_bookings_path(current_user)
   end
 
   private
