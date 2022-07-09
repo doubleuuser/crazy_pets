@@ -15,7 +15,7 @@
             <li><p><%= pet.description %></p></li>
             <li> <b> Price to rent: $<%= pet.price %> </b> </li>
             <button class="btn btn-ghost"> <%= link_to "Edit", edit_pet_path(pet) %></button>
-            <button class="btn btn-ghost"> <%= link_to "Delete", pet_path(pet), method: :delete %></button>
+            <button class="btn btn-ghost"> <%= link_to "Delete", pet_path(pet), method: :delete, data: { confirm: "Are you sure?" } %></button>
           </div>
       </div>
       <% end %>
