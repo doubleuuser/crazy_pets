@@ -29,6 +29,7 @@
   background-color: #f9bc89;
   margin-top: 2vw;
   padding-top: 2em;
+  align-content: flex-start;
 }
 
 .form-container {
@@ -65,7 +66,7 @@
   /* display: flex; } */
 
 
-.bookings-content-container {
+.bookings-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
