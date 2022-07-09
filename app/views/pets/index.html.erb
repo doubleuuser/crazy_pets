@@ -1,13 +1,20 @@
 <div class="container">
-  <h1>Rent a Crazy Pet!</h1>
+
+
+  <div>
+      <img class="w-50 rounded" src="https://images.unsplash.com/photo-1579772991680-1194ef83d407?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60=First slide" alt="First slide">
+  </div>
+
 
   <div class="container">
+    <h1>Rent a Crazy Pet!</h1>
     <h2>Take photos with a weird pet to make it look like you have an interesting life 😊</h2>
     <button class="btn btn-flat-centered"><%= link_to "Add Pet", new_pet_path %></button>
       <%#  <p>Pet owners all around the world have joined Crazy Pets to give you an opportunity to rent some of the craziest pets on the planet so that you can chill with them and take instagram photos together.</p>%>
-  </div>
+    </div>
 
     <%# <div id = "pets"> %>
+
     <h3 class="h3-index">These are the pets we currently have on offer:</h3>
     <div class="index-container">
           <% @pets.each do |pet| %>

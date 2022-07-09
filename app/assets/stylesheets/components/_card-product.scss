@@ -41,11 +41,13 @@
 
 .card-product-show {
   overflow: hidden;
-  height: 320px;
-  background: white;
+  height: 300px;
+  background: #ffb77c;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 4px;
+  padding-left: 8px;
 }
 
 .card-product-infos-show {
