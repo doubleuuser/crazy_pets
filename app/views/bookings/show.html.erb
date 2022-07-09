@@ -1,15 +1,17 @@
 <div class="container">
   <%# <div id = "pets"> %>
+  <div class="card-main">
     <div class="card-product-show">
       <div class="card-product-infos-show">
-        <p><strong>User:</strong> <%= @booking.user %></p>
+        <%# <p><strong>User:</strong> <%= @booking.user </p>%>
         <p><strong>Pet:</strong> <%= @booking.pet.name %></p>
         <p><strong>Price to rent:</strong> $<%= @booking.pet.price %></p>
         <p><strong>Booking Status:</strong> <%= @booking.status.capitalize %></p>
         <%#<br>%>
         <% if @booking.pet.user == current_user %>
-          <button class="btn-flat"><%= link_to "Update Status", edit_booking_path(@booking) %></button>
+          <button class="btn-ghost"><%= link_to "Update Status", edit_booking_path(@booking) %></button>
         <% end %>
       </div>
+    </div>
     </div>
 </div>
